@@ -47,11 +47,11 @@ void ExpenseManager::printBalances() {
         cout << p->getName() << " → ";
 
         if (balance > 0)
-            cout << "طلبکار: " << balance << endl;
+            cout << " creditor: " << balance << endl;
         else if (balance < 0)
-            cout << "بدهکار: " << -balance << endl;
+            cout << " debtor: " << -balance << endl;
         else
-            cout << "بی‌حساب" << endl;
+            cout << " debt-free: " << endl;
     }
 }
 
@@ -76,8 +76,8 @@ void ExpenseManager::settleDebts() {
     size_t i = 0, j = 0;
     while (i < debtors.size() && j < creditors.size()) {
         double amount = min(debtors[i].amount, creditors[j].amount);
-        cout << debtors[i].person->getName() << " باید " << amount
-             << " به " << creditors[j].person->getName() << " بدهد." << endl;
+        cout << debtors[i].person->getName() << " must pay " << amount
+             << " to " << creditors[j].person->getName() << endl;
 
         debtors[i].amount -= amount;
         creditors[j].amount -= amount;

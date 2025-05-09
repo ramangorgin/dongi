@@ -9,22 +9,21 @@ int main() {
     ExpenseManager manager;
 
     int numPeople;
-    cout << "تعداد افراد را وارد کنید: ";
+    cout << "Enter the number of people: ";
     cin >> numPeople;
-
-    cin.ignore(); // حذف newline بعد از عدد
+    cin.ignore(); 
 
     // گرفتن نام افراد
     for (int i = 0; i < numPeople; ++i) {
         string name;
-        cout << "نام فرد شماره " << i + 1 << ": ";
+        cout << "\nName of person " << i + 1 << ": ";
         getline(cin, name);
         manager.addPerson(name);
     }
 
     // گرفتن هزینه‌ها
     int numExpenses;
-    cout << "\nتعداد پرداخت‌ها را وارد کنید: ";
+    cout << "\nEnter the number of payments: ";
     cin >> numExpenses;
     cin.ignore();
 
@@ -33,15 +32,15 @@ int main() {
         double amount;
         int numParticipants;
 
-        cout << "\n--- پرداخت " << i + 1 << " ---" << endl;
+        cout << "\n--- payment " << i + 1 << " ---" << endl;
 
-        cout << "نام پرداخت‌کننده: ";
+        cout << "\nName of Payer: ";
         getline(cin, payerName);
 
-        cout << "مقدار مبلغ پرداختی: ";
+        cout << "\nAmount of Payment: ";
         cin >> amount;
 
-        cout << "تعداد افراد شرکت‌کننده در این پرداخت: ";
+        cout << "\nNumber of Participants: ";
         cin >> numParticipants;
         cin.ignore();
 
@@ -49,7 +48,7 @@ int main() {
 
         for (int j = 0; j < numParticipants; ++j) {
             string participant;
-            cout << "نام فرد " << j + 1 << ": ";
+            cout << "Name of Person" << j + 1 << ": ";
             getline(cin, participant);
             participants.push_back(participant);
         }
@@ -58,11 +57,11 @@ int main() {
     }
 
     // چاپ وضعیت مالی نهایی
-    cout << "\n--- وضعیت مالی افراد ---" << endl;
+    cout << "\n--- Financial Situation ---" << endl;
     manager.printBalances();
 
     // چاپ تسویه
-    cout << "\n--- تسویه بدهی‌ها با کمترین تراکنش ---" << endl;
+    cout << "\n--- Debt Settlement ---" << endl;
     manager.settleDebts();
 
     return 0;
