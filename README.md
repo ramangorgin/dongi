@@ -70,7 +70,7 @@ Reza should pay 5 to Ali
 
 
 
-📁Structure:
+## 📁Structure:
 .
 ├── main.cpp
 ├── Person.h / Person.cpp
@@ -78,7 +78,7 @@ Reza should pay 5 to Ali
 ├── ExpenseManager.h / ExpenseManager.cpp
 └── README.md
 
-📜 License
+## 📜 License
 This project is open source
 
-Made with ❤️ by Raman Gorgin Paveh
+## Made with ❤️ by Raman Gorgin Paveh
