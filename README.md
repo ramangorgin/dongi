@@ -32,11 +32,11 @@ Whether you're going out with friends, sharing rent, or splitting bills, Dongi c
 
 ```bash
 g++ -o dengi main.cpp Person.cpp Expense.cpp ExpenseManager.cpp
+```
 
+## 📸Example:
 
-
-📸Example:
-
+```
 Enter number of people: 3
 Enter name of person #1: Ali
 Enter name of person #2: Sara
@@ -67,8 +67,6 @@ Reza → Debtor: 5.00
 --- Simplified Transactions ---
 Sara should pay 10 to Ali
 Reza should pay 5 to Ali
-
-
 ```
 ## 📁Structure:
 ```
