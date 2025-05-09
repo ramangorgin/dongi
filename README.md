@@ -69,7 +69,7 @@ Sara should pay 10 to Ali
 Reza should pay 5 to Ali
 
 
-
+```
 ## 📁Structure:
 .
 ├── main.cpp
